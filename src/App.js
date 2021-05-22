@@ -2,16 +2,29 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import ThirdComponent, { FourthComponent } from './components/learning-examples/ThirdComponent'
-
+import Counter from './components/counter/Counter'
 class App extends Component {
   render() {
-    return ( //ths is JSX
+    return (
       <div className="App">
+        
+        <LearningdComponents/>
+        <Counter/>
+
+      </div>
+    );
+  }
+}
+
+class LearningdComponents extends Component {
+  render() {
+    return ( //this is JSX
+      <div className="LearnComponents">
         Hi
         <FirstComponent />
         <SecondComponent />
-        <ThirdComponent/>
-        <FourthComponent/>
+        <ThirdComponent />
+        <FourthComponent />
       </div>
       /*     // this javaScript 
       return (React.createElement("div", {
@@ -25,6 +38,9 @@ class App extends Component {
     );
   }
 }
+
+
+
 //class component
 class FirstComponent extends Component {
   render() {
