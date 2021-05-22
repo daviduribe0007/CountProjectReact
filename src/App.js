@@ -1,20 +1,29 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
- 
+
 class App extends Component {
   render() {
-    return (
+    return ( //ths is JSX
       <div className="App">
         Hi
-        <FirstComponent/>
-        <SecondComponent/>
+        <FirstComponent />
+        <SecondComponent />
       </div>
+      /*     // this javaScript 
+      return (React.createElement("div", {
+        className: "App"
+        }, 
+          "Hi",
+          React.createElement(FirstComponent, null),
+          React.createElement(SecondComponent, null))      
+      );    
+      */
     );
   }
 }
 
-class FirstComponent   extends Component {
+class FirstComponent extends Component {
   render() {
     return (
       <div className="firstComponent">
@@ -25,12 +34,12 @@ class FirstComponent   extends Component {
 }
 
 
-function SecondComponent(){
+function SecondComponent() {
   return (
     <div className="firstComponent">
-      second component like a function
+      second component lika a function
     </div>
   );
 }
 
-export default App;  
+export default App;
