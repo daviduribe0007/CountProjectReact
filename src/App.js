@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import ThirdComponent, { FourthComponent } from './components/learning-examples/ThirdComponent'
 
 class App extends Component {
   render() {
@@ -9,6 +10,8 @@ class App extends Component {
         Hi
         <FirstComponent />
         <SecondComponent />
+        <ThirdComponent/>
+        <FourthComponent/>
       </div>
       /*     // this javaScript 
       return (React.createElement("div", {
@@ -22,7 +25,7 @@ class App extends Component {
     );
   }
 }
-
+//class component
 class FirstComponent extends Component {
   render() {
     return (
@@ -33,7 +36,7 @@ class FirstComponent extends Component {
   }
 }
 
-
+//function component
 function SecondComponent() {
   return (
     <div className="firstComponent">
