@@ -68,26 +68,11 @@ class CounterButton extends Component {
 
     return (
       <div className="counter">
-        <button className="incrementButton" onClick={this.incrementOne}>+{this.props.by}</button>
-        <button className="decrementButton" onClick={this.decrementOne}>-{this.props.by}</button>
+        <button className="incrementButton" onClick={() => this.props.incrementMethod(this.props.by)}>+{this.props.by}</button>
+        <button className="decrementButton" onClick={() => this.props.decrementMethod(this.props.by)}>-{this.props.by}</button>
       </div>
     );
-  }
-  
-  incrementOne = () => {
-    //console.log('ingffff');
-    this.setState({
-      counter: this.state.counter + this.props.by
-    });
-    this.props.incrementMethod(this.props.by);
-  }
-
-  decrementOne = () => {
-    this.setState({
-      counter: this.state.counter - this.props.by
-    });
-    this.props.decrementMethod(this.props.by);
-  }
+  }  
 }
 //this is used to asign the defoult values of by or any prop
 CounterButton.defaultProps = {
