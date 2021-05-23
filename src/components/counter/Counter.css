@@ -1,17 +1,13 @@
-.incrementMount {
+.incrementButton {
     background-color: green;
     width: 50px;
     height: 40px;
     border-radius: 10%;
 }
 
-.decrementMount {
+.decrementButton {
     background-color: rgb(224, 52, 52);
     width: 50px;
     height: 40px;
     border-radius: 10%;
-}
-
-.counter {
-    text-align: center;
 }

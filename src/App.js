@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import ThirdComponent, { FourthComponent } from './components/learning-examples/ThirdComponent'
 import Counter from './components/counter/Counter'
@@ -9,7 +8,10 @@ class App extends Component {
       <div className="App">
         
         <LearningdComponents/>
-        <Counter/>
+        <Counter by={1}/>
+        <Counter by={5}/>
+        <Counter by={100}/>
+        
 
       </div>
     );
@@ -26,7 +28,7 @@ class LearningdComponents extends Component {
         <ThirdComponent />
         <FourthComponent />
       </div>
-      /*     // this javaScript 
+      /*     // this javaScript and lab
       return (React.createElement("div", {
         className: "App"
         }, 

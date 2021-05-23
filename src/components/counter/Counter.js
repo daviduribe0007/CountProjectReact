@@ -9,36 +9,40 @@ class Counter extends Component {
     this.state = {
       counter: 0
     }
-    this.incrementOne = this.incrementOne.bind(this); 
-    this.decrementOne = this.decrementOne.bind(this); // bind the method incrementMount
+    //this.incrementOne = this.incrementOne.bind(this); // bind the method incrementMount
+    //this.decrementOne = this.decrementOne.bind(this); // you dont need bind when use a arrow function 
   }
-  render() {
+  render = () => {
+    // const style33 = {fontSize :"50px",padding : "15px 30 px"}; // for java script
+    //style={style33} // and we you need use this only call the const
+    
     return (
       <div className="counter">
-        <td class="tableOperations">
-          <tr>
-            <button class="incrementButton" onClick={this.incrementOne}>+1</button>
-            <button class="decrementButton"onClick={this.decrementOne}>-1</button>
-          </tr>
-          <tr>
-            <span class="resoult"> {this.state.counter}</span>
-          </tr>
-        </td>
+        <tr class="tableOperations">
+          <td>
+            <button class="incrementButton" onClick={this.incrementOne}>+{this.props.by}</button>
+            <button class="decrementButton" onClick={this.decrementOne}>-{this.props.by}</button>
+          </td>          
+        </tr>        
+            <td>
+              <span className="resoult">{this.state.counter}</span>
+            </td>
+          
       </div>
     );
   }
-  incrementOne() {
+  incrementOne = () => {
     //console.log('ingffff');
     this.setState({
-      counter: this.state.counter += 1
+      counter: this.state.counter + this.props.by
     });
-  
+
   }
-  decrementOne() {   
+  decrementOne = () => {
     this.setState({
-      counter: this.state.counter -= 1
+      counter: this.state.counter - this.props.by
     });
-  
+
   }
 
 }
