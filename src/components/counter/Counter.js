@@ -2,6 +2,19 @@ import React, { Component } from 'react';
 import './Counter.css';
 
 class Counter extends Component {
+  render() {
+    return (
+      <div className="counter">
+        <CounterButton by={1} />
+        <CounterButton />
+        <CounterButton by={5} />
+        <CounterButton by={100} />
+      </div>
+    );
+  }
+}
+
+class CounterButton extends Component {
   //Define ethe inicial state in a constructor
   //state-> counter 0
   constructor() {
@@ -15,19 +28,12 @@ class Counter extends Component {
   render = () => {
     // const style33 = {fontSize :"50px",padding : "15px 30 px"}; // for java script
     //style={style33} // and we you need use this only call the const
-    
+
     return (
       <div className="counter">
-        
-        
-         
-            <button className="incrementButton" onClick={this.incrementOne}>+{this.props.by}</button>
-            <button className="decrementButton" onClick={this.decrementOne}>-{this.props.by}</button>
-                   
-            
-              <span className="resoult">{this.state.counter}</span>
-            
-          
+        <button className="incrementButton" onClick={this.incrementOne}>+{this.props.by}</button>
+        <button className="decrementButton" onClick={this.decrementOne}>-{this.props.by}</button>
+        <span className="resoult">{this.state.counter}</span>
       </div>
     );
   }
@@ -46,8 +52,8 @@ class Counter extends Component {
 
 }
 //this is used to asign the defoult values of by or any prop
-Counter.defaultProps = {
-  by:2
+CounterButton.defaultProps = {
+  by: 2
 }
 
 export default Counter;

@@ -6,14 +6,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        
-        <LearningdComponents/>
-        <Counter by={1}/>
+        <LearningdComponents />
         <Counter />
-        <Counter by={5}/>
-        <Counter by={100}/>
-        
-
       </div>
     );
   }
