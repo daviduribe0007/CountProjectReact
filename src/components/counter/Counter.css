@@ -1,13 +1,24 @@
 .incrementButton {
     background-color: green;
-    width: 50px;
+    width: 100px;
     height: 40px;
     border-radius: 10%;
 }
 
 .decrementButton {
     background-color: rgb(224, 52, 52);
-    width: 50px;
+    width: 100px;
     height: 40px;
     border-radius: 10%;
+}
+
+.resetbutton{
+    background-color: rgb(243, 131, 26);
+    width: 200px;
+    height: 40px;
+    border-radius: 10%;
+}
+
+.body{
+    font-size: 15px 30px;
 }

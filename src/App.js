@@ -53,7 +53,7 @@ class FirstComponent extends Component {
 function SecondComponent() {
   return (
     <div className="secondComponent">
-      second component lika a function
+      second component like a function
     </div>
   );
 }
