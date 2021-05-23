@@ -9,6 +9,7 @@ class App extends Component {
         
         <LearningdComponents/>
         <Counter by={1}/>
+        <Counter />
         <Counter by={5}/>
         <Counter by={100}/>
         
@@ -57,7 +58,7 @@ class FirstComponent extends Component {
 //function component
 function SecondComponent() {
   return (
-    <div className="firstComponent">
+    <div className="secondComponent">
       second component lika a function
     </div>
   );

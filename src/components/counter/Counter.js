@@ -18,15 +18,15 @@ class Counter extends Component {
     
     return (
       <div className="counter">
-        <tr class="tableOperations">
-          <td>
-            <button class="incrementButton" onClick={this.incrementOne}>+{this.props.by}</button>
-            <button class="decrementButton" onClick={this.decrementOne}>-{this.props.by}</button>
-          </td>          
-        </tr>        
-            <td>
+        
+        
+         
+            <button className="incrementButton" onClick={this.incrementOne}>+{this.props.by}</button>
+            <button className="decrementButton" onClick={this.decrementOne}>-{this.props.by}</button>
+                   
+            
               <span className="resoult">{this.state.counter}</span>
-            </td>
+            
           
       </div>
     );
@@ -36,7 +36,6 @@ class Counter extends Component {
     this.setState({
       counter: this.state.counter + this.props.by
     });
-
   }
   decrementOne = () => {
     this.setState({
@@ -45,6 +44,10 @@ class Counter extends Component {
 
   }
 
+}
+//this is used to asign the defoult values of by or any prop
+Counter.defaultProps = {
+  by:2
 }
 
 export default Counter;

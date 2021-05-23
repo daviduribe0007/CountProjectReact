@@ -13,7 +13,7 @@ export default class ThirdComponent extends Component {
 
  export function  FourthComponent() {
     return (
-      <div className="firstComponent">
+      <div className="fourthComponent">
       Fourth function component form a module
       </div>
     );
